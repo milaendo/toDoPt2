@@ -14,13 +14,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 app.get("/", function(req, res, next){
-  res.render("index", {appType:"Express"})
+  res.render("index", {items:items})
 })
 
 app.post("/", function(req,res,next){
 	items.push(req.body.todo)
 	console.log(items)
-	res.render("index",{items})
+	res.redirect("/")
 })
 
 app.listen(3000, function(){

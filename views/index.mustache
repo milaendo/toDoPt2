@@ -8,14 +8,15 @@
 <body>
 	<form action="/" method="post">
 		<input type="text" name="todo" placeholder="To do list">
+		<button type="submit">Submit</button>
 		<ul>	
 		{{#items}}
 			<li>
-				{{.}}
+				<input type="checkbox" name="click">{{.}}
 			</li>
 		{{/items}}
 		</ul>
-		<button type="submit">Submit</button>
+		
 	</form>
 </body>
 </html>

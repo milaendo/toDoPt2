@@ -3,6 +3,7 @@ const app = express()
 const path = require('path')
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser')
+let items = []
 
 app.engine('mustache', mustacheExpress());
 app.set('views', './views')
@@ -17,10 +18,9 @@ app.get("/", function(req, res, next){
 })
 
 app.post("/", function(req,res,next){
-	let items = []
 	items.push(req.body.todo)
 	console.log(items)
-	res.render("index",items)
+	res.render("index",{items})
 })
 
 app.listen(3000, function(){

@@ -1,13 +1,14 @@
 {
   "name": "todopt2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mustache-express": "^1.2.5"
   },
